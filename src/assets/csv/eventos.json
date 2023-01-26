@@ -3,36 +3,28 @@
         "nombre":"VIII encuentro Internacional Virtual de Interacción Humano Computador",
         "fecha": "03 de Diciembre de 2022",
         "hora": "08:30 am",
-        "youtube": "0",
-        "zoom": "0",
-        "meet": "0",
+        "transmision":"https://www.youtube.com/user/universidadunad",
         "inscripcion": "https://agenda-egresadosunad.ga/academicos.html#"
     },
     {
         "nombre":"XVIII Cátedra abierta y permanente de Infancias: “Proyectos de acción pedagógica e investigación: los niños como protagonistas”",
         "fecha": "03 de Diciembre de 2022",
         "hora": "08:30 am",
-        "youtube": "https://www.youtube.com/user/universidadunad",
-        "zoom": "0",
-        "meet": "0",
+        "transmision":"teams.com",
         "inscripcion": "https://agenda-egresadosunad.ga/academicos.html#"
     },
     {
-        "nombre":"I CONVERSATORIO SOBRE TECNOLOGÍA, INCLUSIÓN Y TRANSFORMACIÓN DIGITAL EN LA EDUCACIÓN SUPERIOR",
+        "nombre":"VIII encuentro Internacional Virtual de Interacción Humano Computador",
         "fecha": "03 de Diciembre de 2022",
-        "hora": "09:00 am",
-        "youtube": "0",
-        "zoom": "https://unad-edu-co.zoom.us/w/94594847404",
-        "meet": "0",
+        "hora": "08:30 am",
+        "transmision":"https://jitsi.com",
         "inscripcion": "https://agenda-egresadosunad.ga/academicos.html#"
     },
     {
         "nombre":"XVIII Cátedra abierta y permanente de Infancias: “Proyectos de acción pedagógica e investigación: los niños como protagonistas”",
         "fecha": "03 de Diciembre de 2022",
         "hora": "08:30 am",
-        "youtube": "https://www.youtube.com/user/universidadunad",
-        "zoom": "0",
-        "meet": "0",
+        "transmision":"https://zoom.us/",
         "inscripcion": "https://agenda-egresadosunad.ga/academicos.html#"
     }
 ]

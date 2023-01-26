@@ -1,0 +1,21 @@
+<div class="contenedor">
+    <h1>¡Conoce y comunícate con el Monitor de Egresados de tu zona!</h1>
+    <ng-container *ngFor="let item of Equipo">
+        <div class="caja-evento">
+            <h3>{{item.zona}}</h3>
+            <div *ngFor="let j of mapa | keyvalue">
+                <img *ngIf="item.zona.includes(j.key)" src="{{j.value}}" alt="">
+            </div>
+            <h4>{{item.nombre}}</h4>
+            <div class="datos-contacto">
+                <i class="fa fa-envelope" aria-hidden="true"></i><p>{{item.correo}}</p>
+            </div>
+            <div class="datos-contacto">
+                <i class="fa fa-skype" aria-hidden="true"></i><p>{{item.skype}}</p>
+            </div>
+            <div class="datos-contacto">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/57{{item.telefono}}">{{item.telefono}}</a>
+            </div>
+        </div>
+    </ng-container>
+</div>

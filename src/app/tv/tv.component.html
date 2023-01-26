@@ -1,1 +1,15 @@
-<p>tv works!</p>
+<div class="contenedor-evento">
+    <h1>¡Estos son los eventos {{nombre}} de esta semana!</h1>
+    <div class="caja-evento" *ngFor="let item of Evento">
+        <h3>{{item.nombre}}</h3>
+        <h4>{{item.fecha}}<br>{{item.hora}}</h4>
+        <div class="contenedor-transmision">
+            <div *ngFor="let i of mapa | keyvalue">
+                <a *ngIf="item.transmision.includes(i.key)" href={{item.transmision}}>
+                    <img src="{{i.value}}" alt="">
+                </a>
+            </div>
+        </div>
+        <a href={{item.inscripcion}} class="btn-inscripcion">Inscribirse</a>
+    </div>
+</div>

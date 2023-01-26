@@ -12,7 +12,21 @@ import { InvestigacionComponent } from './investigacion/investigacion.component'
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
 import { RadioComponent } from './radio/radio.component';
 import { TvComponent } from './tv/tv.component';
+import { Routes, RouterModule } from '@angular/router';
+import { InicioComponent } from './inicio/inicio.component';
+import { InvilComponent } from './invil/invil.component';
+import { MonitoresComponent } from './monitores/monitores.component';
 
+const appRoutes: Routes = [
+  {path: '', component: InicioComponent},
+  {path: 'academicos', component: AcademicosComponent},
+  {path: 'biblioteca', component: BibliotecaComponent},
+  {path: 'investigacion', component: InvestigacionComponent},
+  {path: 'radio', component: RadioComponent},
+  {path: 'tv', component: TvComponent},
+  {path: 'invil', component: InvilComponent},
+  {path: 'monitores', component: MonitoresComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +38,16 @@ import { TvComponent } from './tv/tv.component';
     BibliotecaComponent,
     RadioComponent,
     TvComponent,
+    InicioComponent,
+    InvilComponent,
+    MonitoresComponent,
   ],
   imports: [
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

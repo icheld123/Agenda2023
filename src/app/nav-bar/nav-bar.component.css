@@ -90,15 +90,15 @@ nav{
 }
 .nav-bar button{
     font-size: 1em;
-    background-color: #005883;
-    border-color: #005883;
-    color: white;
+    background-color: #F8712E;
+    border-color: #F8712E;
+    color: #000;
     padding: 0.7em;
     border-radius: 1em;
     cursor: pointer;
 }
 .nav-bar button:hover{
-    background-color: #F8712E;
-    border-color: #F8712E;
-    color:black;
+    background-color: #005883;
+    border-color: #005883;
+    color:#fff;
 }
