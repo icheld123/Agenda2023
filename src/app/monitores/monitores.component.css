@@ -1,15 +1,25 @@
 .contenedor{
-    width: 80%;
+    font-size: 80%;
     margin: 10em auto;
+    width: 90%;
 }
 .contenedor h1,
 .caja-evento h4{
     text-align: center;
     color: #F47920;
 }
-.caja-evento {
-    background-color:#e5e5e5;
+.caja-evento{
+    display: inline-grid;
+    justify-content: center;
+    grid-column-gap: 2em;
+    width: 45%;
     height: 20em;
+    margin: 1em;
+    text-align: center;
+    padding: 1em;
+    background-color:#e5e5e5;
+    border-width: 0.2em;
+    border-radius: 1em;
 }
 .caja-evento h3{
     color: #005883;

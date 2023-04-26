@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import eventos from 'src/assets/csv/eventos.json';
+import eventos from 'src/assets/json/eventos_radio.json';
 
 @Component({
   selector: 'app-radio',

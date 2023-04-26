@@ -1,6 +1,7 @@
 .contenedor-evento{
+    font-size: 80%;
     margin: 10em auto;
-    width: 80%;
+    width: 90%;
 }
 .contenedor-evento h1{
     text-align: center;
@@ -8,9 +9,10 @@
 
 .caja-evento{
     display: inline-grid;
+    justify-content: center;
     grid-column-gap: 2em;
     width: 45%;
-    height: 17em;
+    height: 15em;
     margin: 1em;
     text-align: center;
     padding: 1em;
@@ -30,7 +32,7 @@
 .caja-evento a.btn-inscripcion{
     background-color: #F8712E;
     padding: 0.5em 1em;
-    width: 20%;
+    width: 5em;
     text-align: center;
     border-radius: 1em;
     margin: auto;

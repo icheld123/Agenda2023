@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import eventos from 'src/assets/csv/eventos.json';
+import eventos from 'src/assets/json/eventos_academicos.json';
 
 @Component({
   selector: 'app-academicos',
@@ -7,7 +7,7 @@ import eventos from 'src/assets/csv/eventos.json';
   styleUrls: ['./academicos.component.css']
 })
 export class AcademicosComponent {
-  tipo = 'académicos';
+  nombre = 'académicos';
   mes = 'enero';
   Evento: any = eventos;
   mapa = new Map<string,string>();

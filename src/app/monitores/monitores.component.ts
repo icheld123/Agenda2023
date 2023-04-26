@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import equipo from 'src/assets/csv/monitores.json';
+import equipo from 'src/assets/json/monitores.json';
 
 @Component({
   selector: 'app-monitores',

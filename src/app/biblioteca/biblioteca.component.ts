@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import eventos from 'src/assets/csv/eventos.json';
-
+import eventos from 'src/assets/json/eventos_biblioteca.json';
 
 @Component({
   selector: 'app-biblioteca',

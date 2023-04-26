@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import eventos from 'src/assets/csv/eventos.json';
+import eventos from 'src/assets/json/eventos_invil.json';
 
 @Component({
   selector: 'app-invil',
@@ -8,7 +8,7 @@ import eventos from 'src/assets/csv/eventos.json';
 })
 export class InvilComponent {
   nombre = 'de INVIL';
-  mes = 'enero';
+  mes = 'abril';
   Evento: any = eventos;
   mapa = new Map<string,string>();
 

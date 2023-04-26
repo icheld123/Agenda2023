@@ -13,12 +13,9 @@ export class AppComponent {
     {nombre: 'Investigación',
     url:'/investigacion'},
     {nombre: 'Biblioteca',
-    url:'biblioteca'},
-    {nombre: 'Radio UNAD Virtual',
-    url:'radio'},
-    {nombre: 'TV UNAD Virtual',
-    url:'tv'}
+    url:'biblioteca'}
   ];
+
   vermas = [
     {nombre: 'Historias de Líderes Unadistas',
     url:'https://camilariveraflye.wixsite.com/egresadosunad'},
