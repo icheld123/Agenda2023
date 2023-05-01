@@ -9,16 +9,13 @@ export class NavBarComponent {
   logo = 'https://noticias.unad.edu.co/templates/unadgeneral/images/logoUNAD.png';
   eventos = [
     {nombre: 'Académicos',
-    url:'https://www.youtube.com/watch?v=nnEOS5kupuc'},
+    url:'/academicos'},
     {nombre: 'Investigación',
-    url:'https://www.youtube.com/watch?v=zVO5xTAbxm8'},
+    url:'/investigacion'},
     {nombre: 'Biblioteca',
-    url:'https://www.youtube.com/watch?v=NL-tvd8jeBc'},
-    {nombre: 'Radio UNAD Virtual',
-    url:'https://www.youtube.com/watch?v=aOnKCcjP8Qs'},
-    {nombre: 'TV UNAD Virtual',
-    url:'https://www.youtube.com/watch?v=4Sc81yxo600'}
+    url:'biblioteca'}
   ];
+
   vermas = [
     {nombre: 'Historias de Líderes Unadistas',
     url:'https://camilariveraflye.wixsite.com/egresadosunad'},
@@ -29,4 +26,13 @@ export class NavBarComponent {
     {nombre: 'Boletín Bibliográfico Vol. 11',
     url:'https://sandrapatriciacarr.wixsite.com/my-site-1'}
   ];
+
+  isMenuOpen: boolean = false;
+
+  constructor() { }
+
+  toggleMenu(): void{
+    console.log("toggle")
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

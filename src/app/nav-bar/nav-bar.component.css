@@ -1,104 +1,195 @@
 nav{
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    height: 6.5em;
-    background: #f9f9f9;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    z-index: 99;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.5em;
+  background: #f9f9f9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
 }
 .nav-bar{
-    width: 90%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: space-between;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+}
+.nav-bar .menu-icon{
+  display: none;
 }
 .nav-bar .menu ul{
-    display: flex;
+  display: flex;
 }
 .nav-bar .menu ul li{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 1em;
 }
-.nav-bar .menu ul li a{
-    text-decoration: none;
-    color: black;
-    white-space: nowrap;
-    line-height: 2em;
+.nav-bar .menu ul li a,
+.nav-mobile .menu ul li a{
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  line-height: 2em;
 }
-.nav-bar .menu ul li a:hover{
-    color: #005883;
+.nav-bar .menu ul li a:hover,
+.nav-mobile .menu ul li a:hover{
+  color: #005883;
 }
-.nav-bar .menu ul li a::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to right, #F0B429, #F47920);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+.nav-bar .menu ul li a::before,
+.nav-mobile .menu ul li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #F0B429, #F47920);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
-.nav-bar .menu ul .sub-menu.show li a::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: -1em;
-    background: linear-gradient(to right, #F0B429, #F47920);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+.nav-bar .menu ul .sub-menu.show li a::before,
+.nav-mobile .menu ul .sub-menu.show li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: -1em;
+  background: linear-gradient(to right, #F0B429, #F47920);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 .nav-bar .menu ul li a:hover::before,
-.nav-bar .menu ul .sub-menu.show li a:hover::before {
-    transform: scaleX(1);
+.nav-bar .menu ul .sub-menu.show li a:hover::before,
+.nav-mobile .menu ul .sub-menu.show li a::before {
+  transform: scaleX(1);
 }
-.nav-bar .menu li .sub-menu{
-    position: absolute;
-    top: 1.5em;
-    background: #fff;
-    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
-    border-radius: 0.5em;
-    display:none;
-    z-index: 2;
+.nav-bar .menu li .sub-menu {
+  position: absolute;
+  top: 1.5em;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  border-radius: 0.5em;
+  display:none;
+  z-index: 2;
 }
-.nav-bar .menu ul .sub-menu.show li a{
-    margin-top: 1em;
-    margin-left: -2em;
+.nav-bar .menu ul .sub-menu.show li a {
+  margin-top: 1em;
+  margin-left: -2em;
 }
+/*CLICK EN DROPDOWN MENU EN MOBILE--HAY QUE ARREGLAR--*/
+.nav-mobile .menu li .sub-menu {
+  position: absolute;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  display:none;
+  z-index: 1;
+}
+.nav-mobile .menu ul .sub-menu.show li a {
+  margin-top: 1em;
+  margin-left: -2em;
+  line-height: 2em;
+}
+.nav-mobile .menu li:hover .show{
+  display: block;
+}
+/*FIN DE DROPDOWN MENU EN MOBILE*/
 .nav-bar .menu li:hover .show{
-    display: block;
+  display: block;
 }
-.nav-bar .menu li:hover .htmlcss-arrow{
-    transform: rotate(180deg);
+.nav-bar .menu li:hover .htmlcss-arrow,
+.nav-mobile .menu li:hover .htmlcss-arrow{
+  transform: rotate(180deg);
 }
-.nav-bar .menu li:hover .arrow{
-    transition: all 0.3s ease;
+.nav-bar .menu li:hover .arrow,
+.nav-mobile .menu li:hover .arrow{
+  transition: all 0.3s ease;
 }
-.nav-bar button{
-    font-size: 1em;
-    background-color: #F8712E;
-    border-color: #F8712E;
-    color: #000;
-    padding: 0.7em;
-    border-radius: 1em;
-    cursor: pointer;
+.nav-bar .button{
+  font-size: 1em;
+  background: linear-gradient(to right, #F0B429, #F47920);
+  color: #000;
+  padding: 0.7em 1em;
+  border-radius: 1em;
+  cursor: pointer;
+  text-align: center;
 }
-.nav-bar button:hover{
-    background-color: #005883;
-    border-color: #005883;
-    color:#fff;
+.nav-bar .button a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-bar .button:hover{
+  background: #F8712E;
+  border-color: #F8712E;
+  box-shadow: 1px 2px grey;
+}
+.nav-mobile{
+  display: none;
+}
+/*Responsive*/
+@media only screen and (max-width:900px) {
+  nav{
+      height: 5.5em;
+  }
+  .nav-bar{
+      width: 90%;
+      display: inline-block;
+      margin: auto;
+  }
+  .nav-bar .logo img{
+      width: 12em;
+      float: left;
+  }
+  .nav-bar .menu-icon{
+      display: block;
+      font-size: 2em;
+      color: #005883;
+      float: right;
+  }
+  .nav-bar .menu-icon:hover{
+      color: #F8712E;
+  }
+  .nav-bar .button,
+  .nav-bar .menu{
+      display: none;
+  }
+  .nav-mobile{
+      width: 100%;
+      position: fixed;
+      top: 5em;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transform: translateX(-100%);
+      transition: all ease-out .5s;
+  }
+  .nav-mobile .menu{
+      margin-left: -1em;
+  }
+  .nav-mobile .menu ul li .sub-menu{
+      position: relative;
+      box-shadow: none;
+      font-size: 90%;
+  }
+  .active{
+      transform: translateX(0);
+  }
+  .menu ul li{
+      list-style: none;
+  }
 }

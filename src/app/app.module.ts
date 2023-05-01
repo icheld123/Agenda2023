@@ -12,22 +12,11 @@ import { InvestigacionComponent } from './investigacion/investigacion.component'
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
 import { RadioComponent } from './radio/radio.component';
 import { TvComponent } from './tv/tv.component';
-import { Routes, RouterModule } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { InvilComponent } from './invil/invil.component';
 import { MonitoresComponent } from './monitores/monitores.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-const appRoutes: Routes = [
-  {path: '', component: InicioComponent},
-  {path: 'academicos', component: AcademicosComponent},
-  {path: 'biblioteca', component: BibliotecaComponent},
-  {path: 'investigacion', component: InvestigacionComponent},
-  {path: 'radio', component: RadioComponent},
-  {path: 'tv', component: TvComponent},
-  {path: 'invil', component: InvilComponent},
-  {path: 'monitores', component: MonitoresComponent}
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,8 +36,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

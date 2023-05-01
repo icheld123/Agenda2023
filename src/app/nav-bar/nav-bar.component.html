@@ -1,0 +1,53 @@
+<nav>
+  <div class="nav-bar">
+      <div class="logo">
+          <a href="#"><img [src]="logo" alt=""></a>
+      </div>
+      <div>
+          <a class="menu-icon" (click)="toggleMenu()">
+              <i class="fa fa-bars" ></i>
+          </a>
+      </div>
+      <div class="menu">
+          <ul>
+              <li><a [routerLink]="'/'">Inicio</a></li>
+              <li><a>Eventos<i class='bx bxs-chevron-down htmlcss-arrow arrow'></i></a>
+                  <ul class="sub-menu show">
+                      <li *ngFor="let item of eventos"><a [routerLink]=item.url>{{item.nombre}}</a></li>
+                  </ul>
+              </li>
+              <li><a [routerLink]='"invil"'>Talleres INVIL</a></li>
+              <li><a href="#">Encuesta de Servicios</a></li>
+              <li><a >Ver más<i class='bx bxs-chevron-down htmlcss-arrow arrow'></i></a>
+                  <ul class="sub-menu show">
+                      <li *ngFor="let item of vermas"><a href={{item.url}} target="_blank">{{item.nombre}}</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+      <div class="button">
+          <a [routerLink]="'monitores'">¡Conoce a tu monitor!</a>
+      </div>
+  </div>
+</nav>
+<ng-container>
+  <div class="nav-mobile" [class.active] = isMenuOpen>
+      <div class="menu">
+          <ul>
+              <li><a [routerLink]="'/'">Inicio</a></li>
+              <li><a>Eventos<i class='bx bxs-chevron-down htmlcss-arrow arrow'></i></a>
+                  <ul class="sub-menu show">
+                      <li *ngFor="let item of eventos"><a [routerLink]=item.url>{{item.nombre}}</a></li>
+                  </ul>
+              </li>
+              <li><a [routerLink]="'invil'">Talleres INVIL</a></li>
+              <li><a href="#">Encuesta de Servicios</a></li>
+              <li><a href="#">Ver más<i class='bx bxs-chevron-down htmlcss-arrow arrow'></i></a>
+                  <ul class="sub-menu show">
+                      <li *ngFor="let item of vermas"><a href={{item.url}} target="_blank">{{item.nombre}}</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</ng-container>
