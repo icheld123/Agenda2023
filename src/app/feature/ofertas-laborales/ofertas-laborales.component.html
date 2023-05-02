@@ -1,0 +1,32 @@
+<div class="contenedor-evento">
+    <h1>¡Estos son las ofertas laborales que tenemos para ti esta semana!</h1>
+
+    <table>
+      <tr>
+        <th *ngFor="let title of cabecera">{{title}}</th>
+      </tr>
+      <tr *ngFor="let oferta of ofertasFiltrados">
+        <td>{{oferta.zona}}</td>
+        <td>{{oferta.ubicacion}}</td>
+        <td>{{oferta.titulo}}</td>
+        <td>
+          <ul>
+            <li *ngFor="let requisito of oferta.requisitos">
+              {{requisito}}
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li *ngFor="let observacion of oferta.observaciones">
+              {{observacion}}
+            </li>
+          </ul>
+        </td>
+        <td>
+          <a href={{oferta.url}} target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+    </table>
+
+</div>

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AcademicosComponent } from './academicos/academicos.component';
-import { BibliotecaComponent } from './biblioteca/biblioteca.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { InvestigacionComponent } from './investigacion/investigacion.component';
-import { InvilComponent } from './invil/invil.component';
-import { MonitoresComponent } from './monitores/monitores.component';
-import { RadioComponent } from './radio/radio.component';
-import { TvComponent } from './tv/tv.component';
-import { OfertasLaboralesComponent } from './ofertas-laborales/ofertas-laborales.component';
+import { AcademicosComponent } from './feature/academicos/academicos.component';
+import { BibliotecaComponent } from './feature/biblioteca/biblioteca.component';
+import { InicioComponent } from './feature/inicio/inicio.component';
+import { InvestigacionComponent } from './feature/investigacion/investigacion.component';
+import { InvilComponent } from './feature/invil/invil.component';
+import { MonitoresComponent } from './feature/monitores/monitores.component';
+import { OfertasLaboralesComponent } from './feature/ofertas-laborales/ofertas-laborales.component';
+import { RadioComponent } from './feature/radio/radio.component';
+import { TvComponent } from './feature/tv/tv.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},

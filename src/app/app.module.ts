@@ -4,26 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { AcademicosComponent } from './academicos/academicos.component';
-import { InvestigacionComponent } from './investigacion/investigacion.component';
-import { BibliotecaComponent } from './biblioteca/biblioteca.component';
-import { RadioComponent } from './radio/radio.component';
-import { TvComponent } from './tv/tv.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { InvilComponent } from './invil/invil.component';
-import { MonitoresComponent } from './monitores/monitores.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { OfertasLaboralesComponent } from './ofertas-laborales/ofertas-laborales.component';
+import { AcademicosComponent } from './feature/academicos/academicos.component';
+import { BibliotecaComponent } from './feature/biblioteca/biblioteca.component';
+import { FormularioComponent } from './feature/formulario/formulario.component';
+import { InicioComponent } from './feature/inicio/inicio.component';
+import { InvestigacionComponent } from './feature/investigacion/investigacion.component';
+import { MonitoresComponent } from './feature/monitores/monitores.component';
+import { OfertasLaboralesComponent } from './feature/ofertas-laborales/ofertas-laborales.component';
+import { RadioComponent } from './feature/radio/radio.component';
+import { TvComponent } from './feature/tv/tv.component';
+import { SharedModule } from './shared/shared.module';
+import { InvilComponent } from './feature/invil/invil.component';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
+import { OfertaService } from './feature/shared/service/oferta.services';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    NavBarComponent,
-    FooterComponent,
     AcademicosComponent,
     InvestigacionComponent,
     BibliotecaComponent,
@@ -35,12 +35,15 @@ import { OfertasLaboralesComponent } from './ofertas-laborales/ofertas-laborales
     OfertasLaboralesComponent,
   ],
   imports: [
+    CoreModule,
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    HttpClientModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [OfertaService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
