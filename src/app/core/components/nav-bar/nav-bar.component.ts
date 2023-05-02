@@ -13,7 +13,9 @@ export class NavBarComponent {
     {nombre: 'Investigación',
     url:'/investigacion'},
     {nombre: 'Biblioteca',
-    url:'biblioteca'}
+    url:'biblioteca'},
+    {nombre: 'INVIL',
+    url:'invil'}
   ];
 
   vermas = [

@@ -10,7 +10,7 @@ const params = {
   key: environment.key
 };
 
-const CABECERA = ["ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "OBSERVACIONES", "URL"];
+const CABECERA = ["ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "CONDICIONES", "URL"];
 const CARACTER_DIVISOR = "-";
 
 @Component({

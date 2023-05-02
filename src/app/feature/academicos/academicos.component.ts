@@ -8,7 +8,7 @@ import eventos from 'src/assets/json/eventos_academicos.json';
 })
 export class AcademicosComponent {
   nombre = 'académicos';
-  mes = 'enero';
+  mes = 'Abril';
   Evento: any = eventos;
   mapa = new Map<string,string>();
 

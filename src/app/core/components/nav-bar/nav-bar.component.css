@@ -38,10 +38,6 @@ nav{
   white-space: nowrap;
   line-height: 2em;
 }
-.nav-bar .menu ul li a:hover,
-.nav-mobile .menu ul li a:hover{
-  color: #005883;
-}
 .nav-bar .menu ul li a::before,
 .nav-mobile .menu ul li a::before {
   content: "";

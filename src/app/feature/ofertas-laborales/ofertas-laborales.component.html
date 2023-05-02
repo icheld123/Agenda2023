@@ -2,7 +2,6 @@
     <h1>¡Estos son las ofertas laborales que tenemos para ti esta semana!</h1>
 
     <form [formGroup]="filtroForm" #myForm="ngForm" (ngSubmit)="iniciarFiltro()">
-      <label for="zona">Zona: </label>
       <select name="zona" id="zona" formControlName="zona">
         <option value="">--Seleccione la zona</option>
         <option *ngFor="let zona of zonasDelResponse" value="{{zona}}">{{zona}}</option>
@@ -10,7 +9,7 @@
       <input type="submit" value="Filtrar">
     </form>
 
-    <table>
+    <table class="styled-table">
       <tr>
         <th *ngFor="let title of cabecera">{{title}}</th>
       </tr>

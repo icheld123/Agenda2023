@@ -8,7 +8,7 @@ import eventos from 'src/assets/json/eventos_investigacion.json';
 })
 export class InvestigacionComponent {
   nombre = 'de investigación';
-  mes = 'enero';
+  mes = 'Abril';
   Evento: any = eventos;
   mapa = new Map<string,string>();
 

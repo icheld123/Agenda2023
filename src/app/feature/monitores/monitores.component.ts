@@ -11,11 +11,11 @@ export class MonitoresComponent {
   mapa = new Map<string,string>();
 
   constructor(){
-    this.mapa.set("líder", "assets/img/lider.jpeg");
+    this.mapa.set("líder", "assets/img/lider.png");
     this.mapa.set("zona caribe", "assets/img/ZCAR.jpeg");
     this.mapa.set("nacional", "assets/img/ZCBOY.png");
     this.mapa.set("zona centro oriente", "assets/img/ZCORI.png");
-    this.mapa.set("cundinamarca", "assets/img/ZCBC.png");
+    this.mapa.set("cundinamarca", "assets/img/ZCBC.jpg");
     this.mapa.set("boyacá", "assets/img/ZCBOYZ.png");
     this.mapa.set("amazonia", "assets/img/ZAO.png");
     this.mapa.set("occidente", "assets/img/ZOCC.png");
