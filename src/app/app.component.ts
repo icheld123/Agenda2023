@@ -1,4 +1,5 @@
 import { Component, HostBinding, HostListener } from '@angular/core';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-root',

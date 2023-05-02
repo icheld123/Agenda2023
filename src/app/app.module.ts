@@ -16,6 +16,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { InvilComponent } from './invil/invil.component';
 import { MonitoresComponent } from './monitores/monitores.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { OfertasLaboralesComponent } from './ofertas-laborales/ofertas-laborales.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     InicioComponent,
     InvilComponent,
     MonitoresComponent,
+    OfertasLaboralesComponent,
   ],
   imports: [
     ReactiveFormsModule,

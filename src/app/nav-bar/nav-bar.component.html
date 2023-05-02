@@ -11,6 +11,7 @@
       <div class="menu">
           <ul>
               <li><a [routerLink]="'/'">Inicio</a></li>
+              <li><a [routerLink]="'ofertas'">Ofertas Laborales</a></li>
               <li><a>Eventos<i class='bx bxs-chevron-down htmlcss-arrow arrow'></i></a>
                   <ul class="sub-menu show">
                       <li *ngFor="let item of eventos"><a [routerLink]=item.url>{{item.nombre}}</a></li>
@@ -35,6 +36,7 @@
       <div class="menu">
           <ul>
               <li><a [routerLink]="'/'">Inicio</a></li>
+              <li><a [routerLink]="'ofertas'">Ofertas Laborales</a></li>
               <li><a>Eventos<i class='bx bxs-chevron-down htmlcss-arrow arrow'></i></a>
                   <ul class="sub-menu show">
                       <li *ngFor="let item of eventos"><a [routerLink]=item.url>{{item.nombre}}</a></li>

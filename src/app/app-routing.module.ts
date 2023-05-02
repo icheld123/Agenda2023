@@ -8,6 +8,7 @@ import { InvilComponent } from './invil/invil.component';
 import { MonitoresComponent } from './monitores/monitores.component';
 import { RadioComponent } from './radio/radio.component';
 import { TvComponent } from './tv/tv.component';
+import { OfertasLaboralesComponent } from './ofertas-laborales/ofertas-laborales.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'radio', component: RadioComponent},
   {path: 'tv', component: TvComponent},
   {path: 'invil', component: InvilComponent},
-  {path: 'monitores', component: MonitoresComponent}
+  {path: 'monitores', component: MonitoresComponent},
+  {path: 'ofertas', component: OfertasLaboralesComponent}
 ];
 
 @NgModule({
