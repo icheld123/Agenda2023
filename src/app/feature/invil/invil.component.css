@@ -1,86 +1,86 @@
 .contenedor-evento{
-    font-size: 80%;
-    margin: 10em auto;
-    width: 90%;
+  font-size: 80%;
+  margin: 10rem auto;
+  width: 90%;
 }
 .contenedor-evento h1{
-    text-align: center;
+  text-align: center;
 }
 
 .caja-evento{
-    display: inline-grid;
-    justify-content: center;
-    grid-column-gap: 2em;
-    width: 45%;
-    height: 15em;
-    margin: 1em;
-    text-align: center;
-    padding: 1em;
-    background-color:#d8e9f1;
-    border-width: 0.2em;
-    border-radius: 1em;
+  display: inline-grid;
+  justify-content: center;
+  grid-column-gap: 2rem;
+  width: 45%;
+  height: 15rem;
+  margin: 1rem;
+  text-align: center;
+  padding: 1rem;
+  background-color:#d8e9f1;
+  border-width: 0.2rem;
+  border-radius: 1rem;
 }
 .caja-evento a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 .caja-evento h4{
-    margin-top: -1em;
-    color: #005883;
+  margin-top: -1rem;
+  color: #005883;
 }
 .caja-evento a.btn-inscripcion{
-    background-color: #F8712E;
-    padding: 0.5em 1em;
-    width: 5em;
-    text-align: center;
-    border-radius: 1em;
-    margin: auto;
+  background-color: #F8712E;
+  padding: 0.5em 1rem;
+  width: 5rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin: auto;
 }
 .caja-evento a.btn-inscripcion:hover{
-    background-color: #f75d11;
-    color: #fff;
+  background-color: #f75d11;
+  color: #fff;
 }
 .contenedor-transmision div{
-    margin: 1em auto;
+  margin: 1rem auto;
 }
 .contenedor-transmision img{
-    width: 7%;
+width: 2rem;
 }
 /*Responsive*/
 @media only screen and (max-width:600px) {
-    .contenedor-evento h1{
-        margin-top: -2em;
-        font-size: 80%;
-    }
-    .caja-evento{
-        font-size: 70%;
-        display: grid;
-        margin: 1em auto;
-        width: 80%;
-        height: 18em;
-    }
-    .caja-evento h4{
-        margin-top: -1em;
-        color: #005883;
-    }
-    .caja-evento a.btn-inscripcion{
-        width: 50%;
-    }
-    .contenedor-transmision img{
-        width: 15%;
-    }
+  .contenedor-evento h1{
+      margin-top: -2rem;
+      font-size: 80%;
+  }
+  .caja-evento{
+      font-size: 70%;
+      display: grid;
+      margin: 1rem auto;
+      width: 80%;
+      height: 18rem;
+  }
+  .caja-evento h4{
+      margin-top: -1rem;
+      color: #005883;
+  }
+  .caja-evento a.btn-inscripcion{
+      width: 50%;
+  }
+  .contenedor-transmision img{
+      width: 8rem;
+  }
 }
 @media only screen and (max-width:1200px) {
-    .contenedor-evento h1{
-        margin-top: -2em;
-        font-size: 90%;
-    }
-    .caja-evento{
-        font-size: 70%;
-        display: grid;
-        margin: 1em auto;
-        width: 80%;
-        height: 18em;
-    }
+  .contenedor-evento h1{
+      margin-top: -1rem;
+      font-size: 90%;
+  }
+  .caja-evento{
+      font-size: 70%;
+      display: grid;
+      margin: 1rem auto;
+      width: 80%;
+      height: 1rem;
+  }
 }

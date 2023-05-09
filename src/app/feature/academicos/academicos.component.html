@@ -5,7 +5,7 @@
         <h4>{{item.fecha}}<br>{{item.hora}}</h4>
         <div class="contenedor-transmision">
             <div *ngFor="let i of mapa | keyvalue">
-                <a *ngIf="item.transmision.includes(i.key)" href={{item.transmision}} target="_blank">
+                <a *ngIf="item.transmision.includes(i.key)" href={{item.transmision}} target="_blank" class="img-transmision">
                     <img src="{{i.value}}" alt="">
                 </a>
             </div>

@@ -8,7 +8,7 @@ import eventos from 'src/assets/json/eventos_invil.json';
 })
 export class InvilComponent {
   nombre = 'de INVIL';
-  mes = 'Abril';
+  mes = 'Mayo';
   Evento: any = eventos;
   mapa = new Map<string,string>();
 
@@ -16,6 +16,6 @@ export class InvilComponent {
     this.mapa.set("zoom", "assets/img/zoom.png");
     this.mapa.set(" ", "assets/img/logomini.png");
     this.mapa.set("jitsi", "assets/img/jitsi.jpeg");
-    
+
   }
 }

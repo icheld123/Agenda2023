@@ -9,6 +9,6 @@ export class InicioComponent {
   title = 'proyecto';
   name = 'Ichel';
   img = 'assets/img/bg.png';
-  mes = 'Enero';
+  mes = 'Mayo';
   ano = '2023';
 }

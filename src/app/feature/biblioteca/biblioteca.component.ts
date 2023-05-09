@@ -8,7 +8,7 @@ import eventos from 'src/assets/json/eventos_biblioteca.json';
 })
 export class BibliotecaComponent {
   nombre = 'de biblioteca';
-  mes = 'Abril';
+  mes = 'Mayo';
   Evento: any = eventos;
   mapa = new Map<string,string>();
 
