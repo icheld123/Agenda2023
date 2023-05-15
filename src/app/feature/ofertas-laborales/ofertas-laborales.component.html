@@ -1,13 +1,11 @@
 <div class="contenedor-evento">
     <h1>¡Estos son las ofertas laborales que tenemos para ti esta semana!</h1>
 
-    <form [formGroup]="filtroForm" #myForm="ngForm" (ngSubmit)="iniciarFiltro()">
-      <select name="zona" id="zona" formControlName="zona">
+      <select name="zona" id="zona">
         <option value="">--Seleccione la zona</option>
         <option *ngFor="let zona of zonasDelResponse" value="{{zona}}">{{zona}}</option>
       </select>
-      <input type="submit" value="Filtrar">
-    </form>
+      <button class="boton-form" (click)="iniciarFiltro()">Filtrar</button>
 
     <table class="styled-table">
       <tr>
@@ -52,6 +50,33 @@
       <h2>Formulario aplicación</h2>
     </div>
     <div class="modal-body">
+      <form id="my-form" target="my-response-iframe" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse" method="post">
+        <div style="display: none;">
+          <label for="entry.923630514">ID Oferta: </label>
+          <input type="text" id="entry.923630514" name="entry.923630514" [value]="valueID" required>
+        </div>
+        <div>
+          <label for="entry.432602229">Email: </label>
+          <input type="email" name="entry.432602229" value="" required>
+        </div>
+        <div>
+          <label for="entry.328376619">Cédula: </label>
+          <input type="number" name="entry.328376619" value="" required>
+        </div>
+        <div>
+          <label for="entry.486661795">Nombre: </label>
+          <input type="text" name="entry.486661795" value="" required>
+        </div>
+        <div>
+          <label for="entry.265503233">Teléfono: </label>
+          <input type="number" name="entry.265503233" value="" required>
+        </div>
+        <input type="submit" class="boton-form">
+      </form>
+      <iframe style="display: none;" id="my-response-iframe" name="my-response-iframe" onload="if(window.submitted||false){alert('Response saved. You may navigate away now');}"></iframe>
+
+
+
     </div>
     <!-- <div class="modal-footer">
       <h3>Modal Footer</h3>

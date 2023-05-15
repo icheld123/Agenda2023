@@ -3,7 +3,7 @@ import { environment } from 'src/environments/environment';
 import { Oferta } from '../shared/model/oferta';
 import { ResponseRequest } from '../shared/model/responseRequest';
 import { OfertaService } from '../shared/service/oferta.services';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+// import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpParams } from '@angular/common/http';
 
 const params = {
@@ -27,8 +27,8 @@ export class OfertasLaboralesComponent implements OnInit {
   public responseRequest!: ResponseRequest;
   public cabecera = CABECERA;
   public zonasDelResponse: string[] = [];
-  public filtroForm: FormGroup;
   public mostrarModal: boolean = false;
+  public valueID: string;
   public modal = {
     titulo: "",
     contenido: ""
@@ -90,24 +90,23 @@ export class OfertasLaboralesComponent implements OnInit {
   }
 
   async iniciarFiltro(){
-    // console.log(this.filtroForm.value);
-    // console.log(this.filtroForm.valid);
     await this.listarOfertas();
-    if (this.ofertas.length > 0 && this.filtroForm.valid){
+    let valueSelect = document.getElementById("zona") as HTMLFormElement
+    if (this.ofertas.length > 0 && valueSelect["value"] != ""){
       this.ofertasFiltrados = [];
       this.ofertas.forEach(oferta => {
-        if (oferta.zona.toLowerCase() == this.filtroForm.value.zona.toLowerCase()){
+        if (oferta.zona.toLowerCase() == valueSelect["value"].toLowerCase()){
           this.ofertasFiltrados.push(oferta);
         }
       });
     }
   }
 
-  public construirFormularioFiltro(){
-    this.filtroForm = new FormGroup({
-      zona: new FormControl("", Validators.required),
-    });
-  }
+  // public construirFormularioFiltro(){
+  //   this.filtroForm = new FormGroup({
+  //     zona: new FormControl("", Validators.required),
+  //   });
+  // }
 
   public abrirModal(oferta: Oferta){
     this.mostrarModal = true;
@@ -119,27 +118,16 @@ export class OfertasLaboralesComponent implements OnInit {
   }
 
   public llenarGoogleForm(id: string){
-    console.log(id);
-    let params = new HttpParams();
-    params = params.append('entry.265503233', 3213213);
-    params = params.append('entry.328376619', 112213);
-    params = params.append('entry.486661795', "natalia");
-    params = params.append('entry.432602229', "test@test.com");
-    params = params.append('entry.923630514', "id1");
+    // let inputID = document.getElementById("entry.923630514") as HTMLFormElement
+    // inputID["value"] = id;
+    this.valueID = id;
+    console.log(this.valueID);
+    // let valueId = document.getElementsByName("entry.923630514") as HTMLFormElement
 
-    this.ofertaService.guardar("https://docs.google.com/forms/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse?entry.265503233=3213213&entry.328376619=112213&entry.486661795=natalia&entry.432602229=test@test.com&entry.923630514=id1", "").subscribe((response: any) => {
-      console.log(response);
-    });
-
-    // this.ofertaService.guardar("https://docs.google.com/forms/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse?entry.265503233=3213213&entry.328376619=112213&entry.486661795=natalia&entry.432602229=test@test.com&entry.923630514=id1", "");
-    // let input = document.getElementsByClassName("whsOnd zHQkBf")[1] as HTMLElement
-
-    // input.focus();
-    // document.execCommand('insertText', false, id);
   }
 
   ngOnInit(){
-    this.construirFormularioFiltro();
+    // this.construirFormularioFiltro();
   }
 
 }

@@ -1,4 +1,4 @@
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,8 +10,7 @@ import { BibliotecaComponent } from './feature/biblioteca/biblioteca.component';
 import { FormularioComponent } from './feature/formulario/formulario.component';
 import { InicioComponent } from './feature/inicio/inicio.component';
 import { InvestigacionComponent } from './feature/investigacion/investigacion.component';
-import { MonitoresComponent } from './feature/monitores/monitores.component';
-import { OfertasLaboralesComponent } from './feature/ofertas-laborales/ofertas-laborales.component';
+import { MonitoresComponent } from './feature/monitores/monitores.component';import { OfertasLaboralesComponent } from './feature/ofertas-laborales/ofertas-laborales.component';
 import { RadioComponent } from './feature/radio/radio.component';
 import { TvComponent } from './feature/tv/tv.component';
 import { SharedModule } from './shared/shared.module';
@@ -19,6 +18,7 @@ import { InvilComponent } from './feature/invil/invil.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OfertaService } from './feature/shared/service/oferta.services';
+
 
 @NgModule({
   declarations: [
@@ -36,8 +36,8 @@ import { OfertaService } from './feature/shared/service/oferta.services';
   ],
   imports: [
     CoreModule,
-    ReactiveFormsModule,
-    FormsModule,
+    // ReactiveFormsModule,
+    // FormsModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
