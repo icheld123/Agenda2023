@@ -1,5 +1,6 @@
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 
 
 @Injectable()
@@ -7,8 +8,8 @@ export class HttpgeneralService {
 
   constructor(public http: HttpClient) {}
 
-  public doPost(endpoint: string, apiRoute: string, body: any){
-    return this.http.post(`${endpoint + apiRoute}`, body, {headers: this.getHttpHeaders()})
+  public doPost(url: string, body: any, params?: HttpParams): Observable<any>{
+    return this.http.post<any>(url, body, {headers: this.getHttpHeaders(), params: params})
   }
 
   public doGet<T>(url: string, data: any){

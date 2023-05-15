@@ -4,13 +4,14 @@ import { Oferta } from '../shared/model/oferta';
 import { ResponseRequest } from '../shared/model/responseRequest';
 import { OfertaService } from '../shared/service/oferta.services';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpParams } from '@angular/common/http';
 
 const params = {
   majorDimension: environment.majorDimension,
   key: environment.key
 };
 
-const CABECERA = ["ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "CONDICIONES", "URL"];
+const CABECERA = ["ID", "ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "CONDICIONES", "URL", "¿APLICÓ?"];
 const CARACTER_DIVISOR = "-";
 
 @Component({
@@ -27,6 +28,11 @@ export class OfertasLaboralesComponent implements OnInit {
   public cabecera = CABECERA;
   public zonasDelResponse: string[] = [];
   public filtroForm: FormGroup;
+  public mostrarModal: boolean = false;
+  public modal = {
+    titulo: "",
+    contenido: ""
+  }
 
   constructor(protected ofertaService: OfertaService){
     this.listarOfertas();
@@ -34,7 +40,7 @@ export class OfertasLaboralesComponent implements OnInit {
 
   async listarOfertas(){
     this.responseRequest = await this.ofertaService.obtenerOfertas(environment.endpoint, environment.apiRoute, params).toPromise().then();
-    // console.log(this.responseRequest);
+    //console.log(this.responseRequest);
     if (this.responseRequest.values.length > 0){
       this.ofertas = this.mapearArrayOfertas(this.responseRequest.values);
       this.ofertasFiltrados = this.ofertas;
@@ -51,12 +57,15 @@ export class OfertasLaboralesComponent implements OnInit {
     this.zonasDelResponse = [];
     for (let index = 1; index < values.length; index++) {
       const element = values[index];
-      let oferta = new Oferta(element[0],element[1],element[2],
-                              this.convertirStringEnArray(element[3]),
-                              this.convertirStringEnArray(element[4]),
-                              element[5]);
-      this.construirArrayZonas(element[0]);
-      arrayDeObjetos.push(oferta);
+      if(element.length == 6){
+        let oferta = new Oferta(element[0],element[1],element[2],element[3],
+                                this.convertirStringEnArray(element[4]),
+                                this.convertirStringEnArray(element[5]),
+                                element[6]);
+          this.construirArrayZonas(element[1]);
+          arrayDeObjetos.push(oferta);
+      }
+
     }
     // console.log("Zonas: " + this.zonasDelResponse);
     return arrayDeObjetos;
@@ -98,6 +107,35 @@ export class OfertasLaboralesComponent implements OnInit {
     this.filtroForm = new FormGroup({
       zona: new FormControl("", Validators.required),
     });
+  }
+
+  public abrirModal(oferta: Oferta){
+    this.mostrarModal = true;
+    this.llenarGoogleForm(oferta.id);
+  }
+
+  public cerrarModal(){
+    this.mostrarModal = false;
+  }
+
+  public llenarGoogleForm(id: string){
+    console.log(id);
+    let params = new HttpParams();
+    params = params.append('entry.265503233', 3213213);
+    params = params.append('entry.328376619', 112213);
+    params = params.append('entry.486661795', "natalia");
+    params = params.append('entry.432602229', "test@test.com");
+    params = params.append('entry.923630514', "id1");
+
+    this.ofertaService.guardar("https://docs.google.com/forms/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse?entry.265503233=3213213&entry.328376619=112213&entry.486661795=natalia&entry.432602229=test@test.com&entry.923630514=id1", "").subscribe((response: any) => {
+      console.log(response);
+    });
+
+    // this.ofertaService.guardar("https://docs.google.com/forms/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse?entry.265503233=3213213&entry.328376619=112213&entry.486661795=natalia&entry.432602229=test@test.com&entry.923630514=id1", "");
+    // let input = document.getElementsByClassName("whsOnd zHQkBf")[1] as HTMLElement
+
+    // input.focus();
+    // document.execCommand('insertText', false, id);
   }
 
   ngOnInit(){

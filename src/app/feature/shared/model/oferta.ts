@@ -1,5 +1,6 @@
 
 export class Oferta {
+  id: string;
   zona: string;
   ubicacion: string;
   titulo: string;
@@ -8,7 +9,8 @@ export class Oferta {
   url: string;
 
 
-  constructor(zona: string, ubicacion: string, titulo: string, requisitos: string[], observaciones: string[], url: string){
+  constructor(id: string, zona: string, ubicacion: string, titulo: string, requisitos: string[], observaciones: string[], url: string){
+      this.id = id;
       this.zona = zona;
       this.ubicacion = ubicacion;
       this.titulo = titulo;
