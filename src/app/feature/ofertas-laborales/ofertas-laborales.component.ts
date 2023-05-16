@@ -29,6 +29,7 @@ export class OfertasLaboralesComponent implements OnInit {
   public zonasDelResponse: string[] = [];
   public mostrarModal: boolean = false;
   public valueID: string;
+  public mostrarForm: boolean = true;
   public modal = {
     titulo: "",
     contenido: ""
@@ -110,6 +111,7 @@ export class OfertasLaboralesComponent implements OnInit {
 
   public abrirModal(oferta: Oferta){
     this.mostrarModal = true;
+    this.mostrarForm = true;
     this.llenarGoogleForm(oferta.id);
   }
 
@@ -123,6 +125,25 @@ export class OfertasLaboralesComponent implements OnInit {
     this.valueID = id;
     console.log(this.valueID);
     // let valueId = document.getElementsByName("entry.923630514") as HTMLFormElement
+
+  }
+
+  public iframeLoad(){
+    console.log("Se recargo");
+    if(this.mostrarForm){
+      this.limpiarForm();
+      this.mostrarForm = false;
+    }
+
+  }
+
+  public limpiarForm(){
+    let form = document.getElementById("my-form") as HTMLFormElement
+    form["entry.432602229"].value = "";
+    form["entry.328376619"].value = "";
+    form["entry.486661795"].value = "";
+    form["entry.265503233"].value = "";
+
 
   }
 

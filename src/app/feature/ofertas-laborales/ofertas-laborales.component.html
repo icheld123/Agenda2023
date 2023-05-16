@@ -50,7 +50,7 @@
       <h2>Formulario aplicación</h2>
     </div>
     <div class="modal-body">
-      <form id="my-form" target="my-response-iframe" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse" method="post">
+      <form *ngIf="mostrarForm" id="my-form" target="my-response-iframe" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdjv3pJ-3DXB3n0P2VwKYAAdU0Zyrz5HeszNJmryPhTI3ExWw/formResponse" method="post">
         <div style="display: none;">
           <label for="entry.923630514">ID Oferta: </label>
           <input type="text" id="entry.923630514" name="entry.923630514" [value]="valueID" required>
@@ -73,7 +73,8 @@
         </div>
         <input type="submit" class="boton-form">
       </form>
-      <iframe style="display: none;" id="my-response-iframe" name="my-response-iframe" onload="if(window.submitted||false){alert('Response saved. You may navigate away now');}"></iframe>
+      <h2 *ngIf="!mostrarForm">Respuesta guardada</h2>
+      <iframe style="display: none;" (load)="iframeLoad()"  id="my-response-iframe" name="my-response-iframe" onload="if(window.submitted||false){alert('Response saved. You may navigate away now');}"></iframe>
 
 
 
