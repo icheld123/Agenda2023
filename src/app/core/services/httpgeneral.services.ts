@@ -8,8 +8,8 @@ export class HttpgeneralService {
 
   constructor(public http: HttpClient) {}
 
-  public doPost(url: string, body: any, params?: HttpParams): Observable<any>{
-    return this.http.post<any>(url, body, {headers: this.getHttpHeaders(), params: params})
+  public doPost(url: string, body: any, options?: any){
+    return this.http.post<any>(url, body, options);
   }
 
   public doGet<T>(url: string, data: any){
@@ -17,6 +17,9 @@ export class HttpgeneralService {
   }
 
   getHttpHeaders(): HttpHeaders {
-    return new HttpHeaders().set('xhr-name', 'consultar registros');
+    let headers = new HttpHeaders().set('access-control-allow-origin',"*");
+    // let headers = new HttpHeaders();
+    headers.set('xhr-name', 'consultar registros');
+    return headers;
   }
 }

@@ -6,3 +6,8 @@ export const environment = {
   majorDimension: "ROWS",
   key: "AIzaSyBft7CFym5YS8lqY2ZqmRTxDrOFz0G897U"
 }
+
+export const environmentForm = {
+  endpoint: "https://docs.google.com/forms/d/e/1FAIpQLSdw6Fm7IjIQ8_KxNh6d3fKPXujhJYifBVpbsXb70HL8l2O4fg/formResponse",
+  key: "AIzaSyBypmTUB5RsRafbWYscwvbGOG6NN107nzk"
+}

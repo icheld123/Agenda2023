@@ -13,7 +13,7 @@ export class OfertaService {
     return this.http.doGet<ResponseRequest>(`${endpoint + apiRoute}`, data);
   }
 
-  public guardar(endpoint: string, body: any, params?: HttpParams): Observable<any>{
-    return this.http.doPost(endpoint, body, params);
+  public guardar(endpoint: string, body: any, options?: any){
+    return this.http.doPost(endpoint, body, options);
   }
 }

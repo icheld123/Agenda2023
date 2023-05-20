@@ -18,6 +18,7 @@ import { InvilComponent } from './feature/invil/invil.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OfertaService } from './feature/shared/service/oferta.services';
+// import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
