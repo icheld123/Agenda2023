@@ -44,7 +44,7 @@ export class OfertasLaboralesComponent implements OnInit {
 
   async listarOfertas(){
     this.responseRequest = await this.ofertaService.obtenerOfertas(environment.endpoint, environment.apiRoute, params).toPromise().then();
-    //console.log(this.responseRequest);
+    // console.log(this.responseRequest);
     if (this.responseRequest.values.length > 0){
       this.ofertas = this.mapearArrayOfertas(this.responseRequest.values);
       this.ofertasFiltrados = this.ofertas;
@@ -61,12 +61,11 @@ export class OfertasLaboralesComponent implements OnInit {
     this.zonasDelResponse = [];
     for (let index = 1; index < values.length; index++) {
       const element = values[index];
-      if(element.length == 6){
+      if(element.length == 7){
         let oferta = new Oferta(element[0],element[1],element[2],element[3],
                                 this.convertirStringEnArray(element[4]),
                                 this.convertirStringEnArray(element[5]),
                                 element[6]);
-          this.construirArrayZonas(element[1]);
           arrayDeObjetos.push(oferta);
       }
 
