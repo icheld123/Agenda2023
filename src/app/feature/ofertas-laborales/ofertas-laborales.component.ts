@@ -64,7 +64,7 @@ export class OfertasLaboralesComponent implements OnInit {
     this.zonasDelResponse = [];
     for (let index = 1; index < values.length; index++) {
       const element = values[index];
-      if(element.length == 7){
+      if(element.length == 7 && this.validarColumnasNoVacias(element)){
         let oferta = new Oferta(element[0],element[1],element[2],element[3],
                                 this.convertirStringEnArray(element[4]),
                                 this.convertirStringEnArray(element[5]),
@@ -76,6 +76,12 @@ export class OfertasLaboralesComponent implements OnInit {
     }
     // console.log("Zonas: " + this.zonasDelResponse);
     return arrayDeObjetos;
+  }
+
+  public validarColumnasNoVacias(element: any){
+    return element[0].length>0 && element[1].length>0
+    && element[2].length>0 && element[3].length>0 && element[4].length>0
+    && element[5].length>0 && element[6].length>0;
   }
 
   public validarSiEsEmail(posibleEmail: string){
