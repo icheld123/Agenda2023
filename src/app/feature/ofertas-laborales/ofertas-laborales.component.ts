@@ -15,6 +15,7 @@ const params = {
 
 const CABECERA = ["ID", "ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "CONDICIONES", "URL/CORREO", "¿APLICÓ?"];
 const CARACTER_DIVISOR = "-";
+const PELUDOS_POR_PAGINA = 4;
 
 @Component({
   selector: 'app-ofertas-laborales',
@@ -23,6 +24,8 @@ const CARACTER_DIVISOR = "-";
 })
 export class OfertasLaboralesComponent implements OnInit {
 
+  public ofertasPorPagina: number = PELUDOS_POR_PAGINA;
+  public paginaActual: number  = 1;
   public formAplicacion: FormGroup;
   public ofertas: Array<Oferta> = [];
   public ofertasFiltrados: Array<Oferta> = [];

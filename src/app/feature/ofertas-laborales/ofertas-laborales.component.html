@@ -1,17 +1,22 @@
 <div class="contenedor-evento">
     <h1>¡Estos son las ofertas laborales que tenemos para ti esta semana!</h1>
 
-      <select name="zona" id="zona">
-        <option value="">--Seleccione la zona</option>
-        <option *ngFor="let zona of zonasDelResponse" value="{{zona}}">{{zona}}</option>
-      </select>
-      <button class="boton-form" (click)="iniciarFiltro()">Filtrar</button>
+    <select name="zona" id="zona">
+      <option value="">--Seleccione la zona</option>
+      <option *ngFor="let zona of zonasDelResponse" value="{{zona}}">{{zona}}</option>
+    </select>
+    <button class="boton-form" (click)="iniciarFiltro()">Filtrar</button>
 
+    <pagination-controls class="m-5 text-center" (pageChange)="paginaActual = $event"
+                                              [autoHide]="true"
+                                              previousLabel="Atras"
+                                              nextLabel="Siguiente">
+                                            </pagination-controls>
     <table class="styled-table">
       <tr>
         <th *ngFor="let title of cabecera">{{title}}</th>
       </tr>
-      <tr *ngFor="let oferta of ofertasFiltrados">
+      <tr *ngFor="let oferta of ofertasFiltrados | paginate: { itemsPerPage: ofertasPorPagina, currentPage: paginaActual }">
         <td>{{oferta.id}}</td>
         <td>{{oferta.zona}}</td>
         <td>{{oferta.ubicacion}}</td>
@@ -41,7 +46,11 @@
         </td>
       </tr>
     </table>
-
+    <pagination-controls class="m-5 text-center" (pageChange)="paginaActual = $event"
+                                              [autoHide]="true"
+                                              previousLabel="Atras"
+                                              nextLabel="Siguiente">
+                                            </pagination-controls>
 </div>
 
 

@@ -14,7 +14,7 @@
 }
 .styled-table th,
 .styled-table td {
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 0.9rem;
     font-size: 0.9rem
 }
 .styled-table tr {
@@ -198,6 +198,20 @@
 
 .is-invalid{
   border: solid 2px red;
+}
+
+pagination-controls{
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .ngx-pagination .current {
+  background: #005883!important;
+}
+
+::ng-deep .ngx-pagination a:hover{
+  background: #F8712E!important;
 }
 
 /*Responsive*/
