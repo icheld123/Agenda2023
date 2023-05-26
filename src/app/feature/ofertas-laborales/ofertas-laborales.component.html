@@ -30,8 +30,11 @@
             </li>
           </ul>
         </td>
-        <td>
-          <a href={{oferta.url}} target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <td style="text-align: center;">
+          <a *ngIf="validarSiEsEmail(oferta.url)" href= {{oferta.url}} target="_blank">
+            <i class="fa fa-external-link" aria-hidden="true"></i>
+          </a>
+          <span *ngIf="!validarSiEsEmail(oferta.url)">{{oferta.url.toUpperCase()}}</span>
         </td>
         <td>
           <a class="boton-form" (click)="abrirModal(oferta)">Apliqué</a>

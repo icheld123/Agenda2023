@@ -13,7 +13,7 @@ const params = {
   key: environment.key
 };
 
-const CABECERA = ["ID", "ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "CONDICIONES", "URL", "¿APLICÓ?"];
+const CABECERA = ["ID", "ZONA", "UBICACIÓN", "TITULO", "REQUISITOS", "CONDICIONES", "URL/CORREO", "¿APLICÓ?"];
 const CARACTER_DIVISOR = "-";
 
 @Component({
@@ -66,12 +66,17 @@ export class OfertasLaboralesComponent implements OnInit {
                                 this.convertirStringEnArray(element[4]),
                                 this.convertirStringEnArray(element[5]),
                                 element[6]);
+          this.construirArrayZonas(element[1]);
           arrayDeObjetos.push(oferta);
       }
 
     }
     // console.log("Zonas: " + this.zonasDelResponse);
     return arrayDeObjetos;
+  }
+
+  public validarSiEsEmail(posibleEmail: string){
+    return (posibleEmail.indexOf("http")>=0 && posibleEmail.indexOf("/")>=0) ? true : false;
   }
 
   private construirArrayZonas(element:string){
