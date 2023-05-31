@@ -62,7 +62,7 @@ export class OfertasLaboralesComponent implements OnInit {
   private mapearArrayOfertas(values: string[]){
     let arrayDeObjetos = [];
     this.zonasDelResponse = [];
-    for (let index = 1; index < values.length; index++) {
+    for (let index = values.length - 1; index > 0; index--) {
       const element = values[index];
       if(element.length == 7 && this.validarColumnasNoVacias(element)){
         let oferta = new Oferta(element[0],element[1],element[2],element[3],
