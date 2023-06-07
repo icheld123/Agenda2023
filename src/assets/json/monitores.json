@@ -7,31 +7,61 @@
     },
     {
         "nombre":"Ichel Delgado Morales",
-        "zona": "zona centro bogotá - cundinamarca",
+        "zona": "zona centro bogotá - cundinamarca. (apoyo nacional)",
         "correo": "iadelgadom@unadvirtual.edu.co",
         "telefono": "3208496838"
     },
     {
+      "nombre":"María Teresa Jara Rodriguez",
+      "zona": "zona centro bogotá - cundinamarca. (apoyo nacional)",
+      "correo": "mtjarar@unadvirtual.edu.co",
+      "telefono": "3197327386"
+    },
+    {
+      "nombre":"Jhonier Sleder Bolaños Aguilera",
+      "zona": "zona centro bogotá - cundinamarca. (apoyo zonal)",
+      "correo": "jsbolanosa@unadvirtual.edu.co",
+      "telefono": "3227514846"
+    },
+    {
         "nombre":"Nelson Dario Guevara",
-        "zona": "zona centro boyacá",
+        "zona": "zona centro boyacá. (apoyo zonal)",
         "correo": "ndguevarap@unadvirtual.edu.co",
         "telefono": "3105670875"
     },
     {
         "nombre":"Juan Pablo Castro Olaya",
-        "zona": "zona amazonia - orinoquia",
+        "zona": "zona amazonia - orinoquia. (apoyo zonal)",
         "correo": "jpcastroo@unadvirtual.edu.co",
         "telefono": "3133689186"
     },
     {
         "nombre":"Melany Arango Lezcano",
-        "zona": "zona occidente",
+        "zona": "zona occidente. (apoyo zonal)",
         "correo": "marangole@unadvirtual.edu.co",
         "telefono": "3122443943"
     },
     {
+      "nombre":"Laura Sofia Álvarez Guerrero",
+      "zona": "zona centro oriente. (apoyo zonal)",
+      "correo": "lsalvarezg@unadvirtual.edu.co",
+      "telefono": "3158256736"
+    },
+    {
+      "nombre":"Connie Michell Valero Gallardo",
+      "zona": "zona caribe. (apoyo zonal)",
+      "correo": "cmvaleroga@unadvirtual.edu.co",
+      "telefono": "3046510677"
+    },
+    {
+      "nombre":"Yuldor Andrés Yate Culma",
+      "zona": "zona sur. (apoyo nacional)",
+      "correo": "yayatec@unadvirtual.edu.co",
+      "telefono": "3222697746"
+    },
+    {
         "nombre":"Adriana Salgado Polando",
-        "zona": "zona sur",
+        "zona": "zona sur. (apoyo zonal)",
         "correo": "asalgadop@unadvirtual.edu.co",
         "telefono": "3176724016"
     }

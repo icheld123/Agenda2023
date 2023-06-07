@@ -4,7 +4,7 @@
         <div class="caja-evento">
             <h3>{{item.zona}}</h3>
             <div *ngFor="let j of mapa | keyvalue">
-                <img *ngIf="item.zona.includes(j.key)" src="{{j.value}}" alt="">
+                <img *ngIf="item.nombre.includes(j.key)" src="{{j.value}}" alt="">
             </div>
             <h4>{{item.nombre}}</h4>
             <div class="datos-contacto">
