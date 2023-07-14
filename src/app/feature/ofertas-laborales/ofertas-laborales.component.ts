@@ -92,6 +92,7 @@ export class OfertasLaboralesComponent implements OnInit {
     if (!this.zonasDelResponse.includes(element)){
       this.zonasDelResponse.push(element);
     }
+    this.zonasDelResponse.sort((a, b) => b.localeCompare(a))
   }
 
 
