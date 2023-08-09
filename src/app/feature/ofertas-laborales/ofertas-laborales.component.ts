@@ -65,16 +65,16 @@ export class OfertasLaboralesComponent implements OnInit {
     for (let index = values.length - 1; index > 0; index--) {
       const element = values[index];
       if(element.length == 7 && this.validarColumnasNoVacias(element)){
-        let oferta = new Oferta(element[0],element[1],element[2],element[3],
+        let oferta = new Oferta(element[0],element[1].trim().toLocaleUpperCase(),element[2],element[3],
                                 this.convertirStringEnArray(element[4]),
                                 this.convertirStringEnArray(element[5]),
                                 element[6]);
-          this.construirArrayZonas(element[1]);
+          this.construirArrayZonas(element[1].trim().toLocaleUpperCase());
           arrayDeObjetos.push(oferta);
       }
 
     }
-    // console.log("Zonas: " + this.zonasDelResponse);
+    console.log("Zonas: " + this.zonasDelResponse);
     return arrayDeObjetos;
   }
 
